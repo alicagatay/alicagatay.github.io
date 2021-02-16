@@ -1,5 +1,25 @@
+<?php
+if(isset($_POST['submit'])){
+    $to = "aliccagatay@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <title>Ali Cagatay</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -88,7 +108,7 @@
         <h1 style="font-size: 80px" class="w3-padding-16 w3-text-light-grey">My Skills</h1>
 
 
-        <h2 style="font-size: 50px" class="w3-padding-16 w3-text-light-grey">My Programming Knowledge</h2>
+        <h2 style="font-size: 50px" class="w3-padding-16 w3-text-light-grey">My Programming Skills</h2>
         <p class="w3-wide">Java</p>
         <div class="w3-white">
             <div class="w3-dark-grey" style="height:28px;width:70%"></div>
@@ -132,7 +152,7 @@
         </div>
 
 
-        <h2 style="font-size: 50px" class="w3-padding-16 w3-text-light-grey">IDE'S and Text Editors I Used/Am Using</h2>
+        <h2 style="font-size: 50px" class="w3-padding-16 w3-text-light-grey">My IDE/Text Editor Skills</h2>
         <p class="w3-wide">Eclipse</p>
         <div class="w3-white">
             <div class="w3-dark-grey" style="height:28px;width:75%"></div>
@@ -194,7 +214,7 @@
         </div>
 
 
-        <h2 style="font-size: 50px" class="w3-padding-16 w3-text-light-grey">Frameworks I Use/Used</h2>
+        <h2 style="font-size: 50px" class="w3-padding-16 w3-text-light-grey">My Framework Skills</h2>
         <p class="w3-wide">Django</p>
         <div class="w3-white">
             <div class="w3-dark-grey" style="height:28px;width:35%"></div>
@@ -206,7 +226,7 @@
         </div>
 
 
-        <h2 style="font-size: 50px" class="w3-padding-16 w3-text-light-grey">Software's I Use/Used</h2>
+        <h2 style="font-size: 50px" class="w3-padding-16 w3-text-light-grey">My Software Skills</h2>
         <p class="w3-wide">Github</p>
         <div class="w3-white">
             <div class="w3-dark-grey" style="height:28px;width:90%"></div>
@@ -237,22 +257,68 @@
     <h2 style="font-size: 50px" class="w3-text-light-grey">My Projects</h2>
     <hr style="width:300px" class="w3-opacity">
 
-    <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-        <div class="w3-half">
-            <img src="/w3images/wedding.jpg" style="width:100%">
-            <img src="/w3images/rocks.jpg" style="width:100%">
-            <img src="/w3images/sailboat.jpg" style="width:100%">
-        </div>
+    <!--
 
-        <div class="w3-half">
-            <img src="/w3images/underwater.jpg" style="width:100%">
-            <img src="/w3images/chef.jpg" style="width:100%">
-            <img src="/w3images/wedding.jpg" style="width:100%">
-            <img src="/w3images/p6.jpg" style="width:100%">
-        </div>
-        <!-- End photo grid -->
-    </div>
+    Predict The Number
+
+    -->
+
+    <h3 style="font-size: 30px"> Predict The Number</h3>
+    <p>
+        Predict The Number was my first official game that I developed by using
+        Java programming language and Android Studio IDE. The aim of the game was to predict the
+        number that the game itself choose randomly. When you predicted a number, the game will tell
+        if the number you predicted is bigger or lower than the actual number, so by doing that you
+        were trying to find the actual number.
+    </p>
+
+    <p><a href="https://play.google.com/store/apps/details?id=com.alicagatay.predictthenumber&gl=TR">Google Play
+        Store link for the application.</a></p>
+
+    <p style="padding-bottom: 80px"><a href="https://github.com/alicagatay/Predict-The-Number">Github repository of the application.</a></p>
+
+
+    <!--
+
+    Space Invaders
+
+    -->
+
+    <h3 style="font-size: 30px"> Space Invaders</h3>
+    <p>
+        Space Invaders was a small remake project that I did while practising my programming skills
+        when I was newly learning about Processing and programming itself. So it is kind of a starting
+        project for me to programming.
+    </p>
+
+    <p style="padding-bottom: 80px"><a href="https://github.com/alicagatay/Space-Invaders">Github repository for the project</a></p>
+
+
+    <!--
+
+    CLI Study Timer
+
+    -->
+    <h3 style="font-size: 30px"> CLI Study Timer</h3>
+
+    <p>
+        This project is a simple CLI based study timer I developed in Python.
+    </p>
+
+    <p style="padding-bottom: 80px"><a href="https://github.com/alicagatay/CLI-Study-Timer">Github repository for the project</a></p>
+
+    <!--
+
+    Outro
+
+    -->
+
+    <p>
+        In this list, I just showed my top projects that I had developed over time.
+        To view the full list of my projects, view
+        my <a href="https://github.com/alicagatay">Github page.</a>
+    </p>
+
     <!-- End Portfolio Section -->
 </div>
 
@@ -269,7 +335,7 @@
     <br>
     <p>Let's get in touch. Send me a message:</p>
 
-    <form action="/action_page.php" target="_blank">
+    <form action="" method="post">
         <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
         <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
         <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
