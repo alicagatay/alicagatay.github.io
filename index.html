@@ -1,23 +1,3 @@
-<?php
-if(isset($_POST['submit'])){
-    $to = "aliccagatay@gmail.com"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $subject = "Form submission";
-    $subject2 = "Copy of your form submission";
-    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <title>Ali Cagatay</title>
@@ -93,7 +73,7 @@ if(isset($_POST['submit'])){
     <!-- Header/Home -->
     <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
         <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Ali Cagatay.</h1>
-        <p>Make. Fail. Learn. Repeat!</p>
+        <p style="font-size: 20px">2nd year Computer Science student at the University Of Birmingham</p>
     </header>
 
 
@@ -103,7 +83,7 @@ if(isset($_POST['submit'])){
         <hr style="width:200px" class="w3-opacity">
         <p style="font-size: 20px">
             My name is Ali Cagatay. I am a second year computer science student at the University of Birmingham. 
-            My interests are programming, calisthenics and minimalism.
+            My interests are programming, music and calisthenics.
         </p>
         <h1 style="font-size: 80px" class="w3-padding-16 w3-text-light-grey">My Skills</h1>
 
@@ -254,8 +234,8 @@ if(isset($_POST['submit'])){
 
 <!-- Portfolio Section -->
 <div class="w3-padding-64 w3-content" id="projects">
-    <h2 style="font-size: 50px" class="w3-text-light-grey">My Projects</h2>
-    <hr style="width:300px" class="w3-opacity">
+    <h1 style="font-size: 80px" class="w3-text-light-grey">My Projects</h1>
+    <hr style="width:480px" class="w3-opacity">
 
     <!--
 
@@ -263,7 +243,7 @@ if(isset($_POST['submit'])){
 
     -->
 
-    <h3 style="font-size: 30px"> Predict The Number</h3>
+    <h2 style="font-size: 50px"> Predict The Number</h2>
     <p>
         Predict The Number was my first official game that I developed by using
         Java programming language and Android Studio IDE. The aim of the game was to predict the
@@ -284,7 +264,7 @@ if(isset($_POST['submit'])){
 
     -->
 
-    <h3 style="font-size: 30px"> Space Invaders</h3>
+    <h2 style="font-size: 50px"> Space Invaders</h2>
     <p>
         Space Invaders was a small remake project that I did while practising my programming skills
         when I was newly learning about Processing and programming itself. So it is kind of a starting
@@ -299,7 +279,7 @@ if(isset($_POST['submit'])){
     CLI Study Timer
 
     -->
-    <h3 style="font-size: 30px"> CLI Study Timer</h3>
+    <h2 style="font-size: 50px"> CLI Study Timer</h2>
 
     <p>
         This project is a simple CLI based study timer I developed in Python.
@@ -313,7 +293,7 @@ if(isset($_POST['submit'])){
 
     -->
 
-    <p>
+    <p style="font-size: 20px">
         In this list, I just showed my top projects that I had developed over time.
         To view the full list of my projects, view
         my <a href="https://github.com/alicagatay">Github page.</a>
