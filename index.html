@@ -1,333 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-<title>Ali Cagatay</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-    body, h1, h2, h3, h4, h5, h6 {
-        font-family: "Montserrat", sans-serif
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="alicagatay">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <title>alicagatay</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    var serviceWorkerVersion = '3653611697';
+    var scriptLoaded = false;
+    function loadMainDartJs() {
+      if (scriptLoaded) {
+        return;
+      }
+      scriptLoaded = true;
+      var scriptTag = document.createElement('script');
+      scriptTag.src = 'main.dart.js';
+      scriptTag.type = 'application/javascript';
+      document.body.append(scriptTag);
     }
 
-    .w3-row-padding img {
-        margin-bottom: 12px
+    if ('serviceWorker' in navigator) {
+      // Service workers are supported. Use them.
+      window.addEventListener('load', function () {
+        // Wait for registration to finish before dropping the <script> tag.
+        // Otherwise, the browser will load the script multiple times,
+        // potentially different versions.
+        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+        navigator.serviceWorker.register(serviceWorkerUrl)
+          .then((reg) => {
+            function waitForActivation(serviceWorker) {
+              serviceWorker.addEventListener('statechange', () => {
+                if (serviceWorker.state == 'activated') {
+                  console.log('Installed new service worker.');
+                  loadMainDartJs();
+                }
+              });
+            }
+            if (!reg.active && (reg.installing || reg.waiting)) {
+              // No active web worker and we have installed or are installing
+              // one for the first time. Simply wait for it to activate.
+              waitForActivation(reg.installing ?? reg.waiting);
+            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+              // When the app updates the serviceWorkerVersion changes, so we
+              // need to ask the service worker to update.
+              console.log('New service worker available.');
+              reg.update();
+              waitForActivation(reg.installing);
+            } else {
+              // Existing service worker is still good.
+              console.log('Loading app from service worker.');
+              loadMainDartJs();
+            }
+          });
+
+        // If service worker doesn't succeed in a reasonable amount of time,
+        // fallback to plaint <script> tag.
+        setTimeout(() => {
+          if (!scriptLoaded) {
+            console.warn(
+              'Failed to load app from service worker. Falling back to plain <script> tag.',
+            );
+            loadMainDartJs();
+          }
+        }, 4000);
+      });
+    } else {
+      // Service workers not supported. Just drop the <script> tag.
+      loadMainDartJs();
     }
-
-    /* Set the width of the sidebar to 120px */
-    .w3-sidebar {
-        width: 120px;
-        background: #222;
-    }
-
-    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-    #main {
-        margin-left: 120px
-    }
-
-    /* Remove margins from "page content" on small screens */
-    @media only screen and (max-width: 600px) {
-        #main {
-            margin-left: 0
-        }
-    }
-</style>
-<body class="w3-black">
-
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-    <!-- Avatar image in top left corner -->
-    <img src="https://avatars.githubusercontent.com/u/29245767?s=460&u=6626823d2954586666cd8cd29d545d9558625f30&v=4"
-         style="width:100%">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-        <i class="fa fa-home w3-xxlarge"></i>
-        <p>HOME</p>
-    </a>
-    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fa fa-user w3-xxlarge"></i>
-        <p>ABOUT</p>
-    </a>
-    <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fa fa-eye w3-xxlarge"></i>
-        <p>PROJECTS</p>
-    </a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fa fa-envelope w3-xxlarge"></i>
-        <p>CONTACT</p>
-    </a>
-</nav>
-
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-        <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-        <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-        <a href="#projects" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
-        <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-    </div>
-</div>
-
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-    <!-- Header/Home -->
-    <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-        <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Ali Cagatay.</h1>
-        <p style="font-size: 20px">2nd year Computer Science student at the University Of Birmingham</p>
-    </header>
-
-
-    <!-- About Section -->
-    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-        <h1 style="font-size: 80px" class="w3-text-light-grey">About Me</h1>
-        <hr style="width:200px" class="w3-opacity">
-        <p style="font-size: 20px">
-
-            Hello everyone, my name is Ali Cagatay. I am a second year Computer Science student at the University of Birmingham.
-            My main interests on programming are web development, machine learning, artificial intelligence, mobile development, and
-            algoraves.
-
-        </p>
-        <h1 style="font-size: 80px" class="w3-padding-16 w3-text-light-grey">My Skills</h1>
-
-
-        <h2 style="font-size: 50px" class="w3-padding-16 w3-text-light-grey">My Programming Skills</h2>
-        <p class="w3-wide">Java</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:70%"></div>
-        </div>
-        <p class="w3-wide">Python</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:85%"></div>
-        </div>
-        <p class="w3-wide">Processing</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:80%"></div>
-        </div>
-
-        <p class="w3-wide">HTML</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:85%"></div>
-        </div>
-
-
-        <p class="w3-wide">CSS</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:85%"></div>
-        </div>
-
-
-        <p class="w3-wide">JavaScript</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:30%"></div>
-        </div>
-
-
-        <p class="w3-wide">C</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:50%"></div>
-        </div>
-
-
-        <p class="w3-wide">Dart</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:65%"></div>
-        </div>
-
-
-        <h2 style="font-size: 50px" class="w3-padding-16 w3-text-light-grey">My IDE/Text Editor Skills</h2>
-        <p class="w3-wide">Eclipse</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:75%"></div>
-        </div>
-
-        <p class="w3-wide">Visual Studio Code</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:75%"></div>
-        </div>
-
-        <p class="w3-wide">Vim</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:70%"></div>
-        </div>
-
-        <p class="w3-wide">IDLE</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:50%"></div>
-        </div>
-
-        <p class="w3-wide">Sublime Text 2 and 3</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:90%"></div>
-        </div>
-
-        <p class="w3-wide">Android Studio</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:80%"></div>
-        </div>
-
-        <p class="w3-wide">Sonic Pi</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:90%"></div>
-        </div>
-
-        <p class="w3-wide">Intellij Idea</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:80%"></div>
-        </div>
-
-        <p class="w3-wide">PyCharm</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:80%"></div>
-        </div>
-
-        <p class="w3-wide">DataGrip</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:30%"></div>
-        </div>
-
-        <p class="w3-wide">WebStorm</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:70%"></div>
-        </div>
-
-        <p class="w3-wide">Clion</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:20%"></div>
-        </div>
-
-
-        <h2 style="font-size: 50px" class="w3-padding-16 w3-text-light-grey">My Framework Skills</h2>
-        <p class="w3-wide">Django</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:35%"></div>
-        </div>
-
-        <p class="w3-wide">Flutter</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:75%"></div>
-        </div>
-
-
-        <h2 style="font-size: 50px" class="w3-padding-16 w3-text-light-grey">My Software Skills</h2>
-        <p class="w3-wide">Github</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:90%"></div>
-        </div>
-
-        <p class="w3-wide">Git</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:75%"></div>
-        </div>
-
-        <p class="w3-wide">virtualBox</p>
-        <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:60%"></div>
-        </div>
-
-
-        <br>
-
-        <button class="w3-button w3-light-grey w3-padding-large w3-section">
-            <i class="fa fa-download"></i> Download Resume
-        </button>
-    </div>
-    <!-- End About Section -->
-</div>
-
-<!-- Portfolio Section -->
-<div class="w3-padding-64 w3-content" id="projects">
-    <h1 style="font-size: 80px" class="w3-text-light-grey">My Projects</h1>
-    <hr style="width:480px" class="w3-opacity">
-
-    <!--
-
-    Predict The Number
-
-    -->
-
-    <h2 style="font-size: 50px"> Predict The Number</h2>
-    <p>
-        Predict The Number was my first official game that I developed by using
-        Java programming language and Android Studio IDE. The aim of the game was to predict the
-        number that the game itself choose randomly. When you predicted a number, the game will tell
-        if the number you predicted is bigger or lower than the actual number, so by doing that you
-        were trying to find the actual number.
-    </p>
-
-    <p><a href="https://play.google.com/store/apps/details?id=com.alicagatay.predictthenumber&gl=TR">Google Play
-        Store link for the application.</a></p>
-
-    <p style="padding-bottom: 80px"><a href="https://github.com/alicagatay/Predict-The-Number">Github repository of the application.</a></p>
-
-
-    <!--
-
-    Space Invaders
-
-    -->
-
-    <h2 style="font-size: 50px"> Space Invaders</h2>
-    <p>
-        Space Invaders was a small remake project that I did while practising my programming skills
-        when I was newly learning about Processing and programming itself. So it is kind of a starting
-        project for me to programming.
-    </p>
-
-    <p style="padding-bottom: 80px"><a href="https://github.com/alicagatay/Space-Invaders">Github repository for the project</a></p>
-
-
-    <!--
-
-    CLI Study Timer
-
-    -->
-    <h2 style="font-size: 50px"> CLI Study Timer</h2>
-
-    <p>
-        This project is a simple CLI based study timer I developed in Python.
-    </p>
-
-    <p style="padding-bottom: 80px"><a href="https://github.com/alicagatay/CLI-Study-Timer">Github repository for the project</a></p>
-
-    <!--
-
-    Outro
-
-    -->
-
-    <p style="font-size: 20px">
-        In this list, I just showed my top projects that I had developed over time.
-        To view the full list of my projects, view
-        my <a href="https://github.com/alicagatay">Github page.</a>
-    </p>
-
-    <!-- End Portfolio Section -->
-</div>
-
-<!-- Contact Section -->
-<div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 style="font-size: 50px" class="w3-text-light-grey">Contact With Me</h2>
-    <hr style="width:430px" class="w3-opacity">
-
-    <div class="w3-section">
-        <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Birmingham, UK</p>
-        <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone 1: +44 7940 5820 65</p>
-        <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone 2: +90 531 788 32 95</p>
-        <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> aliccagatay@gmail.com</p>
-        <p><i class="fa fa-github fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i>
-            <a href="https://github.com/alicagatay">alicagatay</a>
-        </p>
-    </div>
-    <br>
-    <!-- End Contact Section -->
-</div>
-
-
-
-<!-- END PAGE CONTENT -->
-
+  </script>
 </body>
 </html>
-
-
