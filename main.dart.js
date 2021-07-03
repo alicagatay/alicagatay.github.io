@@ -31068,7 +31068,7 @@ P.GD.prototype={}
 P.GE.prototype={}
 D.vN.prototype={
 T:function(a,b){var s=null,r=C.X.i(0,900)
-return M.cI(s,T.oF(M.cI(s,L.fw("Hello, my name is Ali Cagatay. I am a second year Computer Science student at the University of Birmingham. My main interests on Computer Science are machine learning, artificial intelligence, and software development.",A.df(s,s,C.j,s,s,s,s,s,s,s,s,40,s,s,s,s,!0,s,s,s,s,s,s,s)),s,s,300,s,s,800),s,s),r,s,800,s,s,s)}}
+return M.cI(s,T.oF(M.cI(s,L.fw("Hello, my name is Ali Cagatay. I am a second year Computer Science student at the University of Birmingham. My main interests on Computer Science are machine learning, artificial intelligence, web development, and software development.",A.df(s,s,C.j,s,s,s,s,s,s,s,s,40,s,s,s,s,!0,s,s,s,s,s,s,s)),s,s,300,s,s,800),s,s),r,s,800,s,s,s)}}
 A.x_.prototype={
 T:function(a,b){var s=null,r=C.X.i(0,900)
 return M.cI(s,T.a4b(H.a([M.cI(s,L.fw("Contact With Me",A.df(s,s,C.j,s,s,s,s,s,s,s,s,80,s,s,s,s,!0,s,s,s,s,s,s,s)),s,s,s,s,new V.b7(0,0,0,40),s),R.pB(!1,!0,M.cI(s,L.fw("Email: aliccagatay@gmail.com",A.df(s,s,C.j,s,s,s,s,s,s,s,s,25,s,s,s,s,!0,s,s,s,s,s,s,s)),s,s,s,s,new V.b7(0,0,0,20),s),s,!0,s,s,s,s,s,s,s,s,s,new A.K9(),s),R.pB(!1,!0,M.cI(s,L.fw("Github: alicagatay",A.df(s,s,C.j,s,s,s,s,s,s,s,s,25,s,s,s,s,!0,s,s,s,s,s,s,s)),s,s,s,s,s,s),s,!0,s,s,s,s,s,s,s,s,s,new A.Ka(),s)],t.E),C.er),r,s,600,s,s,s)}}
