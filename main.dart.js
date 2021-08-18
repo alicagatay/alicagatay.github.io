@@ -31284,10 +31284,10 @@ L.Kq.prototype={
 $0:function(){L.jM("https://github.com/alicagatay")},
 $S:0}
 L.Kr.prototype={
-$0:function(){L.jM("https://www.linkedin.com/in/ali-%C3%A7a%C4%9Fatay-526875201")},
+$0:function(){L.jM("https://www.linkedin.com/in/alicagatay")},
 $S:0}
 L.Ks.prototype={
-$0:function(){L.jM("https://docs.google.com/document/d/1Ok3pyffLONzZVn0IXYXU6RcUCHpIijOyBCbHOlPxtfM/edit?usp=sharing")},
+$0:function(){L.jM("https://docs.google.com/document/d/1C_fsEj3ET0IKzCMdNOYjQcT8m-8vZzWInE6qeXskYB4/edit?usp=sharing")},
 $S:0}
 D.yh.prototype={
 R:function(a,b){var s=null
