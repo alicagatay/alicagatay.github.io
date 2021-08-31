@@ -31287,7 +31287,7 @@ L.Kr.prototype={
 $0:function(){L.jM("https://www.linkedin.com/in/alicagatay")},
 $S:0}
 L.Ks.prototype={
-$0:function(){L.jM("https://docs.google.com/document/d/1C_fsEj3ET0IKzCMdNOYjQcT8m-8vZzWInE6qeXskYB4/edit?usp=sharing")},
+$0:function(){L.jM("https://docs.google.com/document/d/1QUSOAHbH_91jsgYviYTWRWGn3NGqcvwl/edit?usp=sharing&ouid=116963885626306843574&rtpof=true&sd=true")},
 $S:0}
 D.yh.prototype={
 R:function(a,b){var s=null
