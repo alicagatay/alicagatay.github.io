@@ -19799,7 +19799,7 @@ $1(a){var s=$.br
 s=(s==null?$.br=A.dk(self.window.flutterConfiguration):s).b
 if(s==null)s=null
 else{s=s.canvasKitBaseUrl
-if(s==null)s=null}return(s==null?"https://www.gstatic.com/flutter-canvaskit/b20183e04096094bcc37d9cde2a4b96f5cc684cf/":s)+a},
+if(s==null)s=null}return(s==null?"https://www.gstatic.com/flutter-canvaskit/bd986c5ed20a62dc34b7718c50abc782beae4c33/":s)+a},
 $S:111}
 A.a18.prototype={
 $1(a){this.a.remove()
@@ -35513,7 +35513,7 @@ return A.X(A.ox(A.dc("https://www.linkedin.com/in/alicagatay",0,null)),$async$oO
 case 2:return A.S(null,r)}})
 return A.T($async$oO,r)},
 X(a){var s=this,r=null,q=t.w,p=A.d1(a,r,q).w
-return new A.qJ(new A.rU(new A.CJ(A.bI(r,new A.y4(B.bj,B.o7,B.o8,B.iF,r,B.ha,r,A.a([A.bI(r,A.bI(r,B.xy,B.j,r,r,r,r,r,B.ad,r,r,r,r),B.j,r,r,r,r,r,new A.bb(0,p.a.b/2-300,0,30),r,r,r,r),A.bI(r,B.J5,B.j,r,r,r,r,r,B.ad,r,r,r,r),A.bI(r,new A.xI(B.vI,A.d1(a,r,q).w.a.b/4,r),B.j,r,r,r,r,r,B.xq,r,r,r,r),A.bI(r,A.bI(r,B.J8,B.j,r,r,r,r,r,B.ad,r,r,r,r),B.j,r,r,r,r,r,B.xp,r,r,r,r),A.bI(r,A.bI(r,B.Jb,B.j,r,r,r,r,r,B.ad,r,r,r,r),B.j,r,r,r,r,r,B.d5,r,r,r,r),A.eX(A.qi(!1,!0,A.bI(r,A.eX(A.bI(r,B.J9,B.j,r,r,r,r,r,B.c4,r,r,r,r),r,r),B.j,r,r,B.bT,r,100,B.ad,r,r,r,450),r,!0,r,r,r,r,r,r,r,r,r,s.gRs(),r),r,r),A.bI(r,A.bI(r,B.Je,B.j,r,r,r,r,r,B.ad,r,r,r,r),B.j,r,r,r,r,r,B.d5,r,r,r,r),A.eX(A.qi(!1,!0,A.bI(r,A.eX(A.bI(r,B.Jg,B.j,r,r,r,r,r,B.c4,r,r,r,r),r,r),B.j,r,r,B.bT,r,100,B.ad,r,r,r,400),r,!0,r,r,r,r,r,r,r,r,r,s.gRw(),r),r,r),A.bI(r,A.bI(r,B.Jc,B.j,r,r,r,r,r,B.ad,r,r,r,r),B.j,r,r,r,r,r,B.d5,r,r,r,r),A.eX(A.qi(!1,!0,A.bI(r,A.eX(A.bI(r,B.J7,B.j,r,r,r,r,r,B.c4,r,r,r,r),r,r),B.j,r,r,B.bT,r,100,B.ad,r,r,r,400),r,!0,r,r,r,r,r,r,r,r,r,s.gRu(),r),r,r),A.bI(r,A.bI(r,B.Jf,B.j,r,r,r,r,r,B.ad,r,r,r,r),B.j,r,r,r,r,r,B.d5,r,r,r,r),A.eX(A.qi(!1,!0,A.bI(r,A.eX(A.bI(r,B.Ja,B.j,r,r,r,r,r,B.c4,r,r,r,r),r,r),B.j,r,r,B.bT,r,100,B.xo,r,r,r,400),r,!0,r,r,r,r,r,r,r,r,r,s.gRt(),r),r,r),A.eX(A.qi(!1,!0,A.bI(r,A.eX(A.bI(r,B.J6,B.j,r,r,r,r,r,B.c4,r,r,r,r),r,r),B.j,r,r,B.bT,r,100,B.ad,r,r,r,400),r,!0,r,r,r,r,r,r,r,r,r,s.gRv(),r),r,r)],t.nA),r),B.j,B.wF,r,r,r,2600,r,r,r,r,1/0),r),B.m,r),r)}}
+return new A.qJ(new A.rU(new A.CJ(A.bI(r,new A.y4(B.bj,B.o7,B.o8,B.iF,r,B.ha,r,A.a([A.bI(r,A.bI(r,B.xy,B.j,r,r,r,r,r,B.ad,r,r,r,r),B.j,r,r,r,r,r,new A.bb(0,p.a.b/2-300,0,30),r,r,r,r),A.bI(r,B.J5,B.j,r,r,r,r,r,B.ad,r,r,r,r),A.bI(r,new A.xI(B.vI,A.d1(a,r,q).w.a.b/4,r),B.j,r,r,r,r,r,B.xq,r,r,r,r),A.bI(r,A.bI(r,B.J6,B.j,r,r,r,r,r,B.ad,r,r,r,r),B.j,r,r,r,r,r,B.xp,r,r,r,r),A.bI(r,A.bI(r,B.Jb,B.j,r,r,r,r,r,B.ad,r,r,r,r),B.j,r,r,r,r,r,B.d5,r,r,r,r),A.eX(A.qi(!1,!0,A.bI(r,A.eX(A.bI(r,B.J9,B.j,r,r,r,r,r,B.c4,r,r,r,r),r,r),B.j,r,r,B.bT,r,100,B.ad,r,r,r,450),r,!0,r,r,r,r,r,r,r,r,r,s.gRs(),r),r,r),A.bI(r,A.bI(r,B.Jg,B.j,r,r,r,r,r,B.ad,r,r,r,r),B.j,r,r,r,r,r,B.d5,r,r,r,r),A.eX(A.qi(!1,!0,A.bI(r,A.eX(A.bI(r,B.Jf,B.j,r,r,r,r,r,B.c4,r,r,r,r),r,r),B.j,r,r,B.bT,r,100,B.ad,r,r,r,400),r,!0,r,r,r,r,r,r,r,r,r,s.gRw(),r),r,r),A.bI(r,A.bI(r,B.Jc,B.j,r,r,r,r,r,B.ad,r,r,r,r),B.j,r,r,r,r,r,B.d5,r,r,r,r),A.eX(A.qi(!1,!0,A.bI(r,A.eX(A.bI(r,B.J8,B.j,r,r,r,r,r,B.c4,r,r,r,r),r,r),B.j,r,r,B.bT,r,100,B.ad,r,r,r,400),r,!0,r,r,r,r,r,r,r,r,r,s.gRu(),r),r,r),A.bI(r,A.bI(r,B.Je,B.j,r,r,r,r,r,B.ad,r,r,r,r),B.j,r,r,r,r,r,B.d5,r,r,r,r),A.eX(A.qi(!1,!0,A.bI(r,A.eX(A.bI(r,B.Ja,B.j,r,r,r,r,r,B.c4,r,r,r,r),r,r),B.j,r,r,B.bT,r,100,B.xo,r,r,r,400),r,!0,r,r,r,r,r,r,r,r,r,s.gRt(),r),r,r),A.eX(A.qi(!1,!0,A.bI(r,A.eX(A.bI(r,B.J7,B.j,r,r,r,r,r,B.c4,r,r,r,r),r,r),B.j,r,r,B.bT,r,100,B.ad,r,r,r,400),r,!0,r,r,r,r,r,r,r,r,r,s.gRv(),r),r,r)],t.nA),r),B.j,B.wF,r,r,r,2600,r,r,r,r,1/0),r),B.m,r),r)}}
 A.W7.prototype={
 gC(a){var s=this,r=s.d
 return r==null?s.d=B.d.a2(s.a,s.b,s.c):r},
@@ -62271,16 +62271,16 @@ B.I0=new A.n(!0,B.i,null,"Roboto",null,null,null,null,null,null,null,null,null,n
 B.J4=new A.d2(B.HK,B.IO,B.Iz,B.Gr,B.Iu,B.HE,B.IS,B.GS,B.Hm,B.Ip,B.Gk,B.IA,B.Is,B.Im,B.I0)
 B.ai=new A.n(!0,B.i,null,null,null,null,20,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.J5=new A.dr("I am a full-stack developer, a writer and a full time learner.",null,B.ai,B.as,null)
-B.J6=new A.dr("Press to launch my LinkedIn profile.",null,B.ai,null,null)
-B.J7=new A.dr("Press to launch my GitHub profile.",null,B.ai,null,null)
-B.J8=new A.dr("I work on developing full-stack web and mobile applications, APIs, and databases using tools such as JavaScript, Flutter, Ruby and PostgreSQL.",null,B.ai,B.as,null)
+B.J6=new A.dr("I work on developing full-stack web and mobile applications, APIs, and databases using tools such as JavaScript, React.js, Node.js, Flutter and PostgreSQL.",null,B.ai,B.as,null)
+B.J7=new A.dr("Press to launch my LinkedIn profile.",null,B.ai,null,null)
+B.J8=new A.dr("Press to launch my GitHub profile.",null,B.ai,null,null)
 B.J9=new A.dr("Press to learn more about CodeYourFuture.",null,B.ai,null,null)
 B.Ja=new A.dr("Press to email me.",null,B.ai,null,null)
 B.Jb=new A.dr("Aside from that, I also work on a coding bootcamp called CodeYourFuture, where I, with the help of other instructors, teach full stack web development to it's trainees of the bootcamp and mentor them in their journey of tech.",null,B.ai,B.as,null)
 B.Jc=new A.dr("I also have a GitHub profile where I store all of my projects with their source codes I have built before or in the process of building, just like this website.",null,B.ai,B.as,null)
-B.Je=new A.dr("In addition, I create educational content for developers, teaching them about full-stack web and mobile development using technologies such as Ruby, JavaScript, Dart etc.  in the forms of blog posts inside my Medium blog.",null,B.ai,B.as,null)
-B.Jf=new A.dr("If you ever want to contact me, you can do it either from my email address, or from my LinkedIn, which I will be leaving links to them below.",null,B.ai,B.as,null)
-B.Jg=new A.dr("Press to launch my blog on Medium.",null,B.ai,null,null)
+B.Je=new A.dr("If you ever want to contact me, you can do it either from my email address, or from my LinkedIn, which I will be leaving links to them below.",null,B.ai,B.as,null)
+B.Jf=new A.dr("Press to launch my blog on Medium.",null,B.ai,null,null)
+B.Jg=new A.dr("In addition, I create educational content for developers, teaching them about full-stack web and mobile development using technologies such as HTML, CSS, JavaScript, React, Dart etc.  in the forms of blog posts inside my Medium blog.",null,B.ai,B.as,null)
 B.LE=new A.Xk(0,"system")
 B.Jh=new A.tM(null)
 B.e3=new A.Dq(0,"clamp")
